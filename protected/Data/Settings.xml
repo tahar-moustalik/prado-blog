@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+    <parameter id="SiteTitle" value="Prado-app" />
+    <parameter id="SiteName" value="Prado basic application project" />
+    <parameter id="SiteOwner" value="The Prado Group" />
+    <parameter id="ThemeName" value="Basic" />
+</parameters>

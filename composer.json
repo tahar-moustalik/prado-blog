@@ -1,0 +1,37 @@
+{
+	"name": "pradosoft/prado-app",
+	"type": "project",
+	"description": "Prado 4 basic application project",
+	"license" : "proprietary",
+	"authors": [
+		{
+			"name": "Author Name",
+			"email": "author@email.com",
+			"role" : "Developer"
+		}
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://asset-packagist.org"
+		}
+	],
+	"require": {
+		"pradosoft/prado": "*"
+	},
+	"config": {
+		"vendor-dir": "protected/vendor"
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"chmod 777 assets",
+			"chmod 777 protected/runtime",
+			"chmod 777 protected/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer"
+		],
+		"post-update-cmd": [
+			"chmod 777 assets",
+			"chmod 777 protected/runtime",
+			"chmod 777 protected/vendor/ezyang/htmlpurifier/library/HTMLPurifier/DefinitionCache/Serializer"
+		]
+	}
+}

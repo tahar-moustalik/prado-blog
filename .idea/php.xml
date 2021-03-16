@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/protected/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/protected/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/protected/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/protected/vendor/pradosoft/prado-tinymce3" />
+      <path value="$PROJECT_DIR$/protected/vendor/pradosoft/prado" />
+      <path value="$PROJECT_DIR$/protected/vendor/pradosoft/prado-wsdlgenerator" />
+      <path value="$PROJECT_DIR$/protected/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/protected/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/protected/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/protected/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/protected/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/protected/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/protected/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/protected/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/protected/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/protected/vendor/firephp/firephp-core" />
+      <path value="$PROJECT_DIR$/protected/vendor/bower-asset/clipboard" />
+      <path value="$PROJECT_DIR$/protected/vendor/bower-asset/jquery-ui" />
+      <path value="$PROJECT_DIR$/protected/vendor/bower-asset/bootstrap" />
+      <path value="$PROJECT_DIR$/protected/vendor/bower-asset/jquery" />
+      <path value="$PROJECT_DIR$/protected/vendor/composer" />
+      <path value="$PROJECT_DIR$/protected/vendor/bower-asset/prototypejs-bower" />
+      <path value="$PROJECT_DIR$/protected/vendor/bower-asset/highlightjs-line-numbers.js" />
+      <path value="$PROJECT_DIR$/protected/vendor/bower-asset/highlightjs" />
+      <path value="$PROJECT_DIR$/protected/vendor/bower-asset/tinymce" />
+      <path value="$PROJECT_DIR$/protected/vendor/bower-asset/scriptaculous-bower" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
+</project>
