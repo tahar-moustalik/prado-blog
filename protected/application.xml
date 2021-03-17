@@ -26,7 +26,7 @@
 	</modules>
 	<services>
 		<!-- page service -->
-		<service id="page" class="TPageService" DefaultPage="Home">
+		<service id="page" class="TPageService" DefaultPage="posts.ListPost">
 			<modules>
 				<module id="session" class="THttpSession" SessionName="SSID" CookieMode="Only" UseCustomStorage="false" AutoStart="true" TimeOut="28800" />
 				<module id="asset" class="System.Web.TAssetManager" />

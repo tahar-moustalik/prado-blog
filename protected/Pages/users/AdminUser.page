@@ -1,0 +1,43 @@
+<%@ Title="My Blog - Manage User Accounts" %>
+
+<com:TContent ID="Main">
+
+
+    <div class="container-fluid mt-5 ml-2">
+
+    <h1>Manage User Accounts</h1>
+
+    <a href="<%= $this->Service->constructUrl('users.NewUser')%>" class="btn btn-info mb-2">Create New User</a>
+    <com:TDataGrid
+                   CssClass="table"
+                   ID="UserGrid"
+                   DataKeyField="username"
+                   AutoGenerateColumns="false"
+                   OnDeleteCommand="deleteButtonClicked">
+
+        <com:THyperLinkColumn
+                HeaderText="Username"
+                DataTextField="username"
+                DataNavigateUrlField="username">
+            <prop:DataNavigateUrlFormatString>#
+                $this->Service->constructUrl('users.EditUser',array('username'=>{0}))
+            </prop:DataNavigateUrlFormatString>
+        </com:THyperLinkColumn>
+
+        <com:TBoundColumn
+                HeaderText="Email"
+                DataField="email" />
+
+        <com:TCheckBoxColumn
+                HeaderText="Administrator"
+                DataField="role" />
+
+        <com:TButtonColumn
+                HeaderText="Actions"
+                Text="Delete"
+                ButtonType="PushButton"
+                CommandName="delete" />
+
+    </com:TDataGrid>
+    </div>
+</com:TContent>

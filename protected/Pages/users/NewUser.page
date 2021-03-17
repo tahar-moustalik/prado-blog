@@ -2,72 +2,76 @@
 
 <com:TContent ID="Main">
 
+    <div class="container">
+
     <h1>Create New User</h1>
 
-    <span>Username:</span>
-    <com:TRequiredFieldValidator
-            ControlToValidate="Username"
-            ErrorMessage="Please provide a username."
-            Display="Dynamic" />
-    <com:TCustomValidator
-            ControlToValidate="Username"
-            ErrorMessage="Sorry, your username is taken by someone else. Please choose another username."
-            OnServerValidate="checkUsername"
-            Display="Dynamic" />
-    <br/>
-    <com:TTextBox ID="Username" />
+     <div class="form-group">
+         <label>Username:</label>
+         <com:TRequiredFieldValidator
+                 ControlToValidate="Username"
+                 ErrorMessage="Please provide a username."
+                 Display="Dynamic" />
+         <com:TCustomValidator
+                 ControlToValidate="Username"
+                 ErrorMessage="Sorry, your username is taken by someone else. Please choose another username."
+                 OnServerValidate="checkUsername"
+                 Display="Dynamic" />
+         <com:TTextBox ID="Username" CssClass="form-control"/>
 
-    <br/>
-    <span>Password:</span>
-    <com:TRequiredFieldValidator
-            ControlToValidate="Password"
-            ErrorMessage="Please provide a password."
-            Display="Dynamic" />
-    <br/>
-    <com:TTextBox ID="Password" TextMode="Password" />
+     </div>
 
-    <br/>
-    <span>Re-type Password:</span>
-    <com:TCompareValidator
-            ControlToValidate="Password"
-            ControlToCompare="Password2"
-            ErrorMessage="Your password entries did not match."
-            Display="Dynamic" />
-    <br/>
-    <com:TTextBox ID="Password2" TextMode="Password" />
+        <div class="form-group">
+            <label>Password:</label>
+            <com:TRequiredFieldValidator
+                    ControlToValidate="Password"
+                    ErrorMessage="Please provide a password."
+                    Display="Dynamic" />
+            <com:TTextBox ID="Password" TextMode="Password" CssClass="form-control"/>
+        </div>
 
-    <br/>
-    <span>Email Address:</span>
-    <com:TRequiredFieldValidator
-            ControlToValidate="Email"
-            ErrorMessage="Please provide your email address."
-            Display="Dynamic" />
-    <com:TEmailAddressValidator
-            ControlToValidate="Email"
-            ErrorMessage="You entered an invalid email address."
-            Display="Dynamic" />
-    <br/>
-    <com:TTextBox ID="Email" />
+        <div class="form-group">
+            <label>Re-type Password:</label>
+            <com:TCompareValidator
+                    ControlToValidate="Password"
+                    ControlToCompare="Password2"
+                    ErrorMessage="Your password entries did not match."
+                    Display="Dynamic" />
+            <br/>
+            <com:TTextBox ID="Password2" TextMode="Password" CssClass="form-control"/>
+        </div>
 
-    <br/>
-    <span>Role:</span>
-    <br/>
-    <com:TDropDownList ID="Role">
-        <com:TListItem Text="Normal User" Value="0" />
-        <com:TListItem Text="Administrator" Value="1" />
-    </com:TDropDownList>
+        <div class="form-group">
+            <label>Email: </label>
+            <com:TRequiredFieldValidator
+                    ControlToValidate="Email"
+                    ErrorMessage="Please provide your email address."
+                    Display="Dynamic" />
+            <com:TEmailAddressValidator
+                    ControlToValidate="Email"
+                    ErrorMessage="You entered an invalid email address."
+                    Display="Dynamic" />
 
-    <br/>
-    <span>First Name:</span>
-    <br/>
-    <com:TTextBox ID="FirstName" />
+            <com:TTextBox ID="Email" CssClass="form-control"/>
+        </div>
 
-    <br/>
-    <span>Last Name:</span>
-    <br/>
-    <com:TTextBox ID="LastName" />
+     <div class="form-group">
+         <label>Role:</label>
+         <com:TDropDownList ID="Role" CssClass="form-con">
+             <com:TListItem Text="Normal User" Value="0" />
+             <com:TListItem Text="Administrator" Value="1" />
+         </com:TDropDownList>
+     </div>
 
-    <br/>
-    <com:TButton Text="Create" OnClick="createButtonClicked" />
+        <div class="form-group">
+            <label>First Name:</label>
+            <com:TTextBox ID="FirstName" CssClass="form-control"/>
+      </div>
 
+        <div class="form-group">
+            <label>Last Name:</label>
+            <com:TTextBox ID="LastName" CssClass="form-control"/>
+        </div>
+    <com:TButton Text="Create" OnClick="createButtonClicked" CssClass="btn btn-primary"/>
+    </div>
 </com:TContent>

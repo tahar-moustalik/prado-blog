@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <authorization>
+        <allow pages="NewPost,EditPost" users="@" />
+        <allow pages="ListPost,ReadPost" />
+        <deny users="*" />
+    </authorization>
+</configuration>

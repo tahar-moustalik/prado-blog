@@ -11,16 +11,20 @@ class PostRecord extends TActiveRecord
     public $title;
     public $content;
     public $status;
-
     public $author;
 
     public static $RELATIONS=array
     (
-        'author' => array(self::BELONGS_TO, 'UserRecord'),
+        'author' => array(self::BELONGS_TO, 'UserRecord','author_id'),
     );
 
     public static function finder($className=__CLASS__)
     {
         return parent::finder($className);
+    }
+
+    public function __toString()
+    {
+        return $this->title;
     }
 }

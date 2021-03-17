@@ -1,0 +1,32 @@
+<%@ Title="My Blog" %>
+<com:TContent ID="Main">
+    <div class="row mt-5 container">
+    <com:TRepeater
+                   ID="Repeater"
+                   AllowPaging="true"
+                   AllowCustomPaging="true"
+                   PageSize="5"
+    >
+        <prop:ItemTemplate>
+            <div class="col-lg-4 col-md-6 col-sm-12 align-items-stretch">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <com:THyperLink Text="<%# $this->Data->title %>"
+                                            NavigateUrl="<%# $this->Service->constructUrl('posts.ReadPost',array('id'=>$this->Data->post_id)) %>" />
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Author: <com:TLiteral Text="<%# $this->Data->author->username %>" />
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Time: <com:TLiteral Text="<%# date('m/d/Y h:m:sa', $this->Data->create_time) %>" />
+                        </h6>
+
+                    </div>
+                </div>
+            </div>
+
+        </prop:ItemTemplate>
+    </div>
+    </com:TRepeater>
+    <com:TPager ControlToPaginate="Repeater" OnPageIndexChanged="pageChanged" />
+
+</com:TContent>

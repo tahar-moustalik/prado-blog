@@ -2,27 +2,36 @@
 
 <com:TContent ID="Main">
 
-    <h1>Login</h1>
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
 
-    <span>Username:</span>
-    <com:TRequiredFieldValidator
-            ControlToValidate="Username"
-            ErrorMessage="Please provide your username."
-            Display="Dynamic" />
-    <br/>
-    <com:TTextBox ID="Username" />
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <com:TRequiredFieldValidator
+                            CssClass="text-danger"
+                            ControlToValidate="Username"
+                            ErrorMessage="Please provide your username."
+                            Display="Dynamic" />
+                    <com:TTextBox ID="Username"  CssClass="form-control"/>
+                </div>
 
-    <br/>
-    <span>Password:</span>
-    <com:TCustomValidator
-            ControlToValidate="Password"
-            ErrorMessage="Your entered an invalid password."
-            Display="Dynamic"
-            OnServerValidate="validateUser" />
-    <br/>
-    <com:TTextBox ID="Password" TextMode="Password" />
 
-    <br/>
-    <com:TButton Text="Login" OnClick="loginButtonClicked" />
+                <div class="form-group">
+                    <label for="Password">Password:</label>
+                    <com:TCustomValidator
+                            ControlToValidate="Password"
+                            ErrorMessage="Your entered an invalid password."
+                            Display="Dynamic"
+                            OnServerValidate="validateUser" />
+                    <com:TTextBox ID="Password" TextMode="Password" CssClass="form-control"/>
+                </div>
+
+
+                <com:TButton Text="Login" OnClick="loginButtonClicked" CssClass="btn btn-primary btn-customized"/>
+                <!-- Form end -->
+            </div>
+        </div>
+    </div>
 
 </com:TContent>
